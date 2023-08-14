@@ -35,6 +35,22 @@ export function createFakeUserList() {
         },
       ],
     },
+    {
+      userId: '3',
+      username: 'test',
+      password: '123456',
+      realName: 'test user',
+      avatar: '',
+      desc: 'tester',
+      token: 'fakeToken2',
+      homePath: '/dashboard/electron',
+      roles: [
+        {
+          roleName: 'Tester',
+          value: 'test',
+        },
+      ],
+    },
   ];
 }
 

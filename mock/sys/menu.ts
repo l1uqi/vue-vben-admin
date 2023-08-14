@@ -38,6 +38,18 @@ const dashboardRoute = {
         icon: 'bx:bx-home',
       },
     },
+    {
+      path: 'electron',
+      name: 'Electron',
+      component: '/dashboard/electron/index',
+      meta: {
+        hideMenu: true,
+        hideBreadcrumb: true,
+        title: 'routes.dashboard.electron',
+        currentActiveMenu: '/electron',
+        icon: 'bx:bx-home',
+      },
+    },
   ],
 };
 

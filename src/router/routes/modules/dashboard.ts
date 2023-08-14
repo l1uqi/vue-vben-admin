@@ -31,6 +31,14 @@ const dashboard: AppRouteModule = {
         title: t('routes.dashboard.workbench'),
       },
     },
+    {
+      path: 'electron',
+      name: 'Electron',
+      component: () => import('/@/views/dashboard/electron/index.vue'),
+      meta: {
+        title: t('routes.dashboard.electron'),
+      },
+    },
   ],
 };
 

@@ -1,4 +1,5 @@
 import { defineApplicationConfig } from '@vben/vite-config';
+import electron from 'vite-plugin-electron';
 
 export default defineApplicationConfig({
   overrides: {
@@ -32,5 +33,23 @@ export default defineApplicationConfig({
         },
       },
     },
+    plugins: [
+      electron([
+        {
+          entry: 'electron/main.ts',
+        },
+        {
+          entry: 'electron/preload.ts',
+          vite: {
+            rollupOptions: {
+              output: {
+                inlineDynamicImports: true,
+                manualChunks: undefined,
+              },
+            },
+          },
+        },
+      ]),
+    ],
   },
 });
